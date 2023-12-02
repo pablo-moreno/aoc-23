@@ -2,6 +2,7 @@ from unittest import TestCase
 from .part_01 import solve as solve_part_1
 from .part_02 import solve as solve_part_2
 
+
 class TestDay01(TestCase):
     def setUp(self) -> None:
         self.input_values_01 = [

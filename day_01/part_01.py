@@ -26,6 +26,7 @@ Consider your entire calibration document. What is the sum of all of the calibra
 
 """
 import re
+from datetime import datetime
 from typing import List
 
 
@@ -46,8 +47,11 @@ def _get_calibration_value_from_line(line: str) -> int:
 
 
 if __name__ == '__main__':
+    init = datetime.now()
     filename = 'input.txt'
     with open(filename) as f:
         values = f.readlines()
         result = solve(values)
         print(result)
+    finish = datetime.now()
+    print(f'Solved in {(finish - init).microseconds / 1000} ms')
